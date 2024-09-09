@@ -4,6 +4,8 @@ import AdminHome from '../components/adminComponents/AdminHome';
 import AdminComplaintPortal from '../components/adminComponents/AdminComplaintPortal';
 import AdminHeader from '../components/adminComponents/AdminHeader'; // Import AdminHeader
 import ScheduledComplaint from '../components/adminComponents/ScheduledComplaint'; // Import ScheduledComplaint
+import ConsideredAndResolved from '../components/adminComponents/ConsideredAndResolved'; // Import ConsideredAndResolved
+import Employees from '../components/adminComponents/Employees'; // Import Employees
 
 const Admin = ({ onBack }) => {
   const [adminSelectedOption, setAdminSelectedOption] = useState('Home');
@@ -17,9 +19,9 @@ const Admin = ({ onBack }) => {
       case 'Scheduled Complaints':
         return <ScheduledComplaint />;
       case 'Considered and Resolved':
-        return <div>Admin Considered and Resolved Content</div>;
+        return <ConsideredAndResolved />;
       case 'Employees':
-        return <div>Admin Employees Content</div>;
+        return <Employees />; // Render Employees component
       case 'Feedback':
         return <div>Admin Feedback Content</div>;
       case 'Settings':
